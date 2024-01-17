@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 22:37:23 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/16 22:48:56 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/17 22:59:22 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,18 @@ int ft_format(va_list ptr, const char format)
     int count = 0;
     
     if (format == 'c')
-    {
-        count += ft_putchar(ar_arg(ptr, ));
-    }
+        count += ft_putchar(va_arg(ptr,int));
+    else if (format == 's')
+        count += ft_putstr(va_arg(ptr, char *));
+    else if (format == 'd')
+        count += ft_putnbr(va_arg(ptr,int));
+    else if (format == 'u')
+        count += ft_putunbr(va_arg(ptr,unsigned int));
+    else if (format == 'X')
+        count += ft_hexup(va_arg(ptr, int));
+    else if (format == 'x')
+        count += ft_hexlow(va_arg(ptr, unsigned int));
+    else if (format == 'p')
+        count += ft_ptr(va_arg(ptr, void *));
     return 0;
 }
