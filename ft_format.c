@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 22:37:23 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/18 15:41:14 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:35:33 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_format(va_list ptr, const char format)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (format == 'c')

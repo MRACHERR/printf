@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:32:20 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/18 14:22:14 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:43:16 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ static int	ft_count(long n)
 	}
 	return (counter);
 }
+
 int	ft_putunbr(unsigned int nb)
 {
-	long nbr;
-	int l;
+	long	nbr;
+	int		l;
 
 	nbr = nb;
 	l = ft_count(nbr);

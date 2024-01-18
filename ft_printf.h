@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/18 18:39:50 by acherraq          #+#    #+#             */
+/*   Updated: 2024/01/18 18:40:13 by acherraq         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
+
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int nbr);

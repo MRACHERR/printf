@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 18:58:28 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/18 14:27:30 by acherraq         ###   ########.fr       */
+/*   Created: 2024/01/18 18:44:32 by acherraq          #+#    #+#             */
+/*   Updated: 2024/01/18 20:12:35 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_printf(const char *s, ...)
 {
@@ -19,6 +18,8 @@ int	ft_printf(const char *s, ...)
 	int		i;
 	va_list	ptr;
 
+	if (write(1, "", 0))
+		return (-1);
 	va_start(ptr, s);
 	if (!s)
 		return (0);
@@ -33,27 +34,9 @@ int	ft_printf(const char *s, ...)
 			count += ft_format(ptr, s[++i]);
 		}
 		else
-		{
-			ft_putchar(s[i]);
-			count++;
-		}
+			count += ft_putchar(s[i]);
 		i++;
 	}
 	va_end(ptr);
 	return (count);
 }
-#include <stdio.h>
-
-/*
-int	main(void)
-{
-	printf("%d",ft_printf("%d", 120));
-	printf("\n\n\n\n\n");
-	printf("%d",printf("%d", 120));
-	// char c = 'z';
-	// ft_printf("%u\n %s \n %p\n\n\n", -214748364, "hellloc fuc", &c);
-	// printf("%u\n %s \n %p", -214748364, "hellloc fuc", &c);
-	//printf("%d", c);
-	//printf("%d",-2147483648);
-}
-*/

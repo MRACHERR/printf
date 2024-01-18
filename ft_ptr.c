@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 22:59:47 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/18 13:03:33 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/18 18:41:29 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ static int	ft_count(unsigned long long n)
 	}
 	return (counter);
 }
+
 static void	ft_write_ptr(unsigned long long addr)
 {
-	char	tab[] = "0123456789abcdef";
+	char	*tab;
 
+	tab = "0123456789abcdef";
 	if (addr >= 16)
 		ft_write_ptr(addr / 16);
 	ft_putchar(tab[addr % 16]);
