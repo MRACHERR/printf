@@ -12,34 +12,34 @@
 
 #include "ft_printf.h"
 
-static int ft_count(unsigned long long n)
+static int	ft_count(unsigned long long n)
 {
-    int counter;
+	int	counter;
 
-    counter = 0;
-    if (n == 0)
-        return(1);
-    while(n != 0)
-    {
-        counter++;
-        n /= 16;
-    }
-    return (counter);
+	counter = 0;
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		counter++;
+		n /= 16;
+	}
+	return (counter);
 }
-static void ft_write_ptr(unsigned long long addr)
+static void	ft_write_ptr(unsigned long long addr)
 {
-    char tab[] = "0123456789abcdef" ;
-    if (addr >= 16)
-        ft_write_ptr(addr / 16);
-    ft_putchar(tab[addr % 16]);
+	char	tab[] = "0123456789abcdef";
 
+	if (addr >= 16)
+		ft_write_ptr(addr / 16);
+	ft_putchar(tab[addr % 16]);
 }
 
-int ft_ptr(void * addr)
+int	ft_ptr(void *addr)
 {
-    if (!addr)
-        return(write(1, "0x0", 3));
-    write(1, "0x", 2);
-    ft_write_ptr((unsigned long long)addr);
-    return (2 + ft_count((unsigned long long)addr));
+	if (!addr)
+		return (write(1, "0x0", 3));
+	write(1, "0x", 2);
+	ft_write_ptr((unsigned long long)addr);
+	return (2 + ft_count((unsigned long long)addr));
 }

@@ -12,33 +12,33 @@
 
 #include "ft_printf.h"
 
-static  int ft_count(long n)
+static int	ft_count(long n)
 {
-    int counter;
+	int	counter;
 
-    counter = 0;
-    if (n == 0)
-        return (1);
-    while (n > 0)
-    {
-        n /= 10;
-        counter++;        
-    }
-    return (counter);
+	counter = 0;
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n /= 10;
+		counter++;
+	}
+	return (counter);
 }
-int ft_putunbr(unsigned int nb)
+int	ft_putunbr(unsigned int nb)
 {
-    long    nbr;
-    int     l;
-    
-    nbr = nb;
-    l = ft_count(nbr);
-    if (nbr > 9)
-    {
-           ft_putnbr(nbr / 10); 
-           ft_putnbr(nbr % 10);
-    }
-    else
-        ft_putchar('0' + nbr); 
-return (l);
+	long nbr;
+	int l;
+
+	nbr = nb;
+	l = ft_count(nbr);
+	if (nbr > 9)
+	{
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
+	}
+	else
+		ft_putchar('0' + nbr);
+	return (l);
 }
