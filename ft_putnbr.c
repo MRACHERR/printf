@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:08:19 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/17 15:56:31 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:26:45 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static  int ft_count(long n)
 {
     int counter;
 
+    counter = 0;
     if (n == 0)
         return (1);
     if (n < 0)
@@ -33,7 +34,6 @@ static  int ft_count(long n)
 int ft_putnbr(int nb)
 {
     long    nbr;
-    char    c;
     int     l;
     
     nbr = nb;

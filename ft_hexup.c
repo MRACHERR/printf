@@ -6,16 +6,18 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 16:15:19 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/17 17:51:42 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/18 15:19:37 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_count(unsigned int hex)
+static int ft_count(unsigned int hex)
 {
     int i;
     i = 0;
+    if (hex == 0)
+        return (1);
     while (hex > 0)
     {
        hex /= 16; 
@@ -26,15 +28,15 @@ int ft_count(unsigned int hex)
 
 int ft_hexup(unsigned int h)
 {
-    char * tab;
     char c;
+    char *T;
     int count;
 
     count = ft_count(h);
-    tab = "0123456789ABCDEF";
+    T = "0123456789ABCDEF";
     if (h / 16 == 0)
     {
-        c = tab[h % 16];
+        c = T[h % 16];
         ft_putchar(c);
     }
     else
@@ -42,5 +44,5 @@ int ft_hexup(unsigned int h)
         ft_hexup(h / 16);
         ft_hexup(h % 16);
     }
-return (0);
+return (count);
 }

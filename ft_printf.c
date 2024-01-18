@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 18:58:28 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/17 16:11:33 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/18 14:27:30 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,17 @@ int ft_printf(const char *s, ...)
     va_end(ptr);
     return (count);
 }
-
+#include <stdio.h>
+/*
 int main()
 {
-    //ft_printf("hello");
-    char c = 'z';
-    c = sizeof(ft_printf("%u\n %s", -214748364, "hellloc fuc"));
-    printf("%d", c);
+    printf("%d",ft_printf("%d", 120));
+    printf("\n\n\n\n\n");
+    printf("%d",printf("%d", 120));
+    // char c = 'z';
+    // ft_printf("%u\n %s \n %p\n\n\n", -214748364, "hellloc fuc", &c);
+    // printf("%u\n %s \n %p", -214748364, "hellloc fuc", &c);
+    //printf("%d", c);
     //printf("%d",-2147483648); 
 }
+*/
