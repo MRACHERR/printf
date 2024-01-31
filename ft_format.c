@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 22:37:23 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/30 15:12:13 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:46:45 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,8 @@ int	ft_format(va_list ptr, const char format)
 	else if (format == 'p')
 		count += ft_ptr(va_arg(ptr, void *));
 	else if (format == '%')
-	{
-		write(1, "%", 1);
-		count++;
-	}
-	else{
-		
-		write(1, &format, 1);
-		count++;
-	}
+		count += write(1, "%", 1);
+	else
+		count += write(1, &format, 1);
 	return (count);
 }

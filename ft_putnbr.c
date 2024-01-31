@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 12:08:19 by acherraq          #+#    #+#             */
-/*   Updated: 2024/01/31 11:15:36 by acherraq         ###   ########.fr       */
+/*   Updated: 2024/01/31 11:44:25 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	ft_putnbr(int nb)
 	l = ft_count(nbr);
 	if (nbr == -2147483648)
 	{
-		// ft_putstr("-2147483648");
-		// return(11);
+		ft_putstr("-2147483648");
+		return (11);
 	}
 	else if (nbr < 0)
 	{
